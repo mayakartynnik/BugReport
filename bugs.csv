@@ -1,0 +1,609 @@
+﻿"Issue Id","Project","Tags","Summary","Reporter","Created","Updated","Resolved","Priority","Type","State","Assignee","Sprints","Ideal days","Original estimation","Story points","Environment","Description","Votes"
+"G44-118","group4.4","Star","Кнопка ""Назад"" не работает при создании новой задачи","kartynnikm","14 May 2023","14 May 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Pixel_3a Android 13.0","**Description:** При попытке создания новой задачи, кнопка ""Назад"" в верхней части экрана не реагирует на нажатие.
+
+**Pre-conditions**
+
+Запустить Android Studio
+Запустить эмулятор устройства Pixel 3a API 33
+Открыть приложение TO-DO-MVP
+
+**Steps to Reproduce:**
+
+1. Нажать на кнопку ""plus"" на странице ""TO DO LIST""
+2. Без заполнения полей задачи, нажать кнопку ""Назад""
+
+**Actual Result:** Кнопка ""Назад"" не реагирует на нажатие, оставаясь на странице создания задачи.
+
+**Expected Result:** После нажатия кнопки ""Назад"", вы должны вернуться к списку задач, отменяя создание новой задачи.
+
+**Additional Information:** При попытке редактирования существующей задачи, также кнопка ""Назад"" в верхней части экрана не реагирует на нажатие.","0"
+"G44-107","group4.4","Star","Mobile App Testing-Maya Kartynnik","kartynnikm","14 May 2023","14 May 2023",,"Normal","Task","Open","Unassigned","Unscheduled",,,,"No environment",,"0"
+"G44-117","group4.4","Star","Изменения не сохраняются при редактировании задачи","kartynnikm","14 May 2023","14 May 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Pixel_3a Android 13.0","**Pre-conditions**
+
+Запустить Android Studio
+Запустить эмулятор устройства Pixel 3a API 33
+Открыть приложение TO-DO-MVP
+Тестовые задачи созданы см. <https://app.qase.io/case/G44-114>
+
+**Steps to Reproduce:**
+
+1. Нажать на созданную задачу
+2. Нажать на красную кнопку с карандашем (редактирование)
+3. Изменить название и описание задачи, подтвердить изменения
+
+**Actual Result:** Внесенные изменения не сохраняются, информация о задаче остается прежней.
+
+**Expected Result:** Внесенные изменения должны сохраняться и отображаться при просмотре задачи.","0"
+"G44-116","group4.4","Star","Задача создается при пустом поле ""title""","kartynnikm","14 May 2023","14 May 2023",,"Normal","Bug","Open","Unassigned","Unscheduled",,,,"Pixel_3a Android 13.0","**Description:** При создании новой задачи без указания названия в поле ""title"", задача все равно успешно создается.
+
+**Pre-conditions**
+
+Запустить Android Studio
+Запустить эмулятор устройства Pixel 3a API 33
+Открыть приложение TO-DO-MVP
+
+**Steps to Reproduce:**
+
+1. Нажать на кнопку ""plus"" на странице ""TO DO LIST""
+2. Оставить поле ""title"" пустым
+3. Ввести описание в поле ""Enter your TO-DO here""(""Create a test set for the online store ""Allegro"""")
+4. Нажать на красную кнопку с ""галочкой"" в правом нижнем углу
+
+**Actual Result:** Задача без названия успешно создается и появляется в списке задач.
+
+**Expected Result:** Система не позволяет создать задачу без названия. Пользователь получает сообщение об ошибке, указывающее на необходимость заполнения поля ""title"".
+
+
+","0"
+"G44-115","group4.4","Star","Фильтр ""Active"" в меню ""Döner Menu"" показывает все задачи, а не только активные","kartynnikm","14 May 2023","14 May 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Pixel_3a Android 13.0","**Description:** При выборе фильтра ""Active"" в меню ""Döner Menu"", отображаются все задачи, включая завершенные, а не только активные.
+
+**Pre-conditions**
+
+Запустить Android Studio
+Запустить эмулятор устройства Pixel 3a API 33
+Открыть приложение TO-DO-MVP
+Тестовые задачи созданы см. <https://app.qase.io/case/G44-114>
+**Steps to Reproduce:**
+
+1. Изменить состояние некоторых задач в ""checkbox"" как завершенные
+2. Нажать на ""Döner Menu""
+3. Выбрать ""Active""
+
+**Actual Result:** В списке задач отображаются все задачи, включая завершенные.
+
+**Expected Result:** Новая задача с введенным Title сохраняется и отображается в списке задач.","0"
+"G44-114","group4.4","Star","Краш приложения при вводе спецсимволов в поле описания задачи","kartynnikm","14 May 2023","14 May 2023",,"Show-stopper","Bug","Open","Unassigned","Unscheduled",,,,"Pixel_3a Android 13.0","**Description:** При создании новой задачи и вводе спецсимволов в поле описания задачи, задача не сохраняется, все созданные задачи удаляются.
+
+**Pre-conditions**
+
+Запустить Android Studio
+Запустить эмулятор устройства Pixel 3a API 33
+Открыть приложение TO-DO-MVP
+
+**Steps to Reproduce:**
+
+1. Нажать на кнопку ""plus"" на странице ""TO DO LIST""
+2. Ввести название в поле ""title"" (""Create test suite"")
+3. Ввести специальные символы в поле ""Enter your TO-DO here"" (""!?@#$%"")
+4. Нажать на красную кнопку с ""галочкой"" в правом нижнем углу
+
+**Actual Result:** Задача не сохраняется, не появляется в списке задач, все созданные задачи удаляются.
+
+**Expected Result:** Новая задача с введенным описанием сохраняется и отображается в списке задач.
+
+**Additional Information:** При вводе комбинации латиницы и спецсимволов, также задача не сохраняется и не появляется в списке задач. Точка и запятая также вызывают эту ошибку.","0"
+"G44-113","group4.4","Star","Краш приложения при вводе спецсимволов в поле ""Title""","kartynnikm","14 May 2023","14 May 2023",,"Show-stopper","Bug","Open","Unassigned","Unscheduled",,,,"Pixel_3a Android 13.0","**Description:** При создании новой задачи и вводе спецсимволов в поле Title, задача не сохраняется, все созданные задачи удаляются.
+
+**Pre-conditions**
+
+Запустить Android Studio
+Запустить эмулятор устройства Pixel 3a API 33
+Открыть приложение TO-DO-MVP
+
+**Steps to Reproduce:**
+
+1. Нажать на кнопку ""plus"" на странице ""TO DO LIST""
+2. Введите только спецсимволы в поле ""title"" (""!?@#$%"")
+3. Нажать на красную кнопку с ""галочкой"" в правом нижнем углу
+
+**Actual Result:** Задача не сохраняется, не появляется в списке задач, все созданные задачи удаляются.
+
+**Expected Result:** Новая задача с введенным Title сохраняется и отображается в списке задач.
+
+**Additional Information:** При вводе комбинации латиницы и спецсимволов, также происходит краш приложения.","0"
+"G44-111","group4.4","Star","Краш приложения при вводе цифр в поле ""Title""","kartynnikm","14 May 2023","14 May 2023",,"Show-stopper","Bug","Open","Unassigned","Unscheduled",,,,"Pixel_3a Android 13.0","**Description:** При создании новой задачи и вводе цифр в поле Title, задача не сохраняется и не появляется в списке задач, удаляются все существующие задачи.
+
+**Pre-conditions**
+
+Запустить Android Studio
+Запустить эмулятор устройства Pixel 3a API 33
+Открыть приложение TO-DO-MVP
+
+**Steps to Reproduce:**
+
+1. Нажать на кнопку ""plus"" на странице ""TO DO LIST""
+2. Введите только цифры в поле ""title"" (12345)
+3. Нажать на красную кнопку с ""галочкой"" в правом нижнем углу
+
+**Actual Result:** Задача не сохраняется, удаляются все существующие задачи.
+
+**Expected Result:** Новая задача с введенным Title сохраняется и отображается в списке задач.
+
+**Additional Information:** При вводе комбинации латиницы и цифр, также задача не сохраняется, не появляется в списке задач, удаляются все существующие задачи.","0"
+"G44-112","group4.4","Star","Краш приложения при вводе цифр в поле описания задачи","kartynnikm","14 May 2023","14 May 2023",,"Show-stopper","Bug","Open","Unassigned","Unscheduled",,,,"Pixel_3a Android 13.0","**Bug Description:** При создании новой задачи и вводе цифр в поле описания задачи, задача не сохраняется, не появляется в списке задач, удаляются все существующие задачи.
+
+**Pre-conditions**
+
+Запустить Android Studio
+Запустить эмулятор устройства Pixel 3a API 33
+Открыть приложение TO-DO-MVP
+
+**Steps to Reproduce:**
+
+1. Нажать на кнопку ""plus"" на странице ""TO DO LIST""
+2. Ввести название в поле ""title"" (""Create test suite"")
+3. Ввести только цифры в поле ""Enter your TO-DO here""(""12345"")
+4. Нажать на красную кнопку с ""галочкой"" в правом нижнем углу
+
+**Actual Result:** Задача не сохраняется, удаляются все существующие задачи.
+
+**Expected Result:** Новая задача с введенным описанием сохраняется и отображается в списке задач.
+
+**Additional Information:** При вводе комбинации латиницы и цифр, также задача не сохраняется и происходит краш приложения.","0"
+"G44-110","group4.4","Star","Краш приложения при обновлении списка задач через ""Refresh""","kartynnikm","14 May 2023","14 May 2023",,"Show-stopper","Bug","Open","Unassigned","Unscheduled",,,,"Pixel_3a Android 13.0","**Description:**
+
+При попытке обновления списка задач с помощью функции ""Refresh"" в ""Kebab Menu"" приложение закрывается. После повторного открытия приложения список задач оказывается пустым.
+
+**Pre-conditions**
+
+Запустить Android Studio
+Запустить эмулятор устройства Pixel 3a API 33
+Открыть приложение TO-DO-MVP
+Тестовые задачи созданы см. <https://app.qase.io/case/G44-114>
+
+**Steps to Reproduce:**
+
+1. Открыть ""Kebab Menu""
+2. Нажать на ""Refresh""
+
+**Actual Result:**
+
+Приложение закрывается. После повторного открытия приложения список задач пуст, все ранее созданные задачи удалены.
+
+**Expected Result:**
+
+Список задач обновляется, все существующие задачи остаются на месте.","0"
+"G44-109","group4.4","Star","Функция ""Clear completed"" не работает","kartynnikm","14 May 2023","14 May 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Pixel_3a Android 13.0","**Description:** При попытке использования функции ""Clear completed "" в ""Kebab Menu"", завершенные задачи не исчезают из списка задач.
+
+**Steps to Reproduce:**
+
+1. Запустить Android Studio
+2. Запустить эмулятор устройства Pixel 3a API 33
+3. Открыть приложение TO-DO-MVP
+4. Cоздать несколько задач
+5. Отметьте некоторые из них как завершенные
+6. Открыть ""Kebab Menu""
+7. Нажать на ""Clear completed""
+
+**Actual Result:**
+
+Завершенные задачи остаются в списке, изменений не происходит.
+
+**Expected Result:**
+
+Все задачи, отмеченные как завершенные, должны быть удалены из списка задач.","0"
+"G44-108","group4.4","Star","Статистика по завершенным задачам не обновляется","kartynnikm","14 May 2023","14 May 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Pixel_3a Android 13.0","**Description:**
+
+При завершении задач в приложении, счетчик ""Completed tasks"" в разделе ""Statistics"" не отображает актуальное количество завершенных задач, оставаясь на значении ""0""
+
+**Steps to reproduce:**
+
+1. Запустить Android Studio
+2. Запустить эмулятор устройства Pixel 3a API 33
+3. Открыть приложение TO-DO-MVP
+4. Cоздать несколько задач
+5. Отметьте некоторые из них как завершенные
+6. Перейти в “Hamburger Menu”, в раздел ""Statistics""
+
+**Actual Result:**
+
+Счетчик ""Completed tasks"" показывает ""0"", несмотря на наличие завершенных задач.
+
+**Expected Result:**
+
+В разделе ""Statistics"" отображается актуальное количество активных и завершенных задач.","0"
+"G44-99","group4.4","Star","В ""Checkbox"" на странице ""Shopping cart"" при нажатии на ссылку ""read"" для просмотра условий использования, происходит перенаправление пользователя  на страницу с пустым текстом","kartynnikm","14 Apr 2023","14 Apr 2023",,"Major","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110 MACOS 13","**Description:**
+
+На странице оформления заказа пользователю предлагается прочитать и согласиться с условиями использования. Однако при нажатии на ссылку ""[read](https://demowebshop.tricentis.com/t-popup/conditionsofuse)"" для просмотра условий, происходит перенаправление пользователя  на страницу с пустым текстом, который не содержит действительных условий использования. Это может вызвать путаницу и недоверие со стороны пользователей.
+
+**Steps to reproduce:**
+
+1. Добавить товар в ""**Shopping cart**""
+2. Перейти на страницу ""[Shopping cart](https://demowebshop.tricentis.com/cart)""
+3. Найти в правом нижнем углу текст ""I agree with the terms of service and I adhere to them unconditionally ([read](https://demowebshop.tricentis.com/t-popup/conditionsofuse))""
+4. Нажать на ссылку ""[read](https://demowebshop.tricentis.com/t-popup/conditionsofuse)"" для просмотра условий использования
+
+**Actual Result:**
+
+Пользователь перенаправлен на страницу с не релевантным текстом, не содержащим действительных условий использования.
+
+**Expected Result:**
+
+Пользователь должен быть перенаправлен на страницу с реальными и конкретными условиями использования.","0"
+"G44-97","group4.4","Star","Некорректное отображение стоимости доставки в ""Estimate shipping""","kartynnikm","14 Apr 2023","14 Apr 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110 MACOS 13","**Description:**
+
+При оценке стоимости доставки на странице корзины, система некорректно отображает стоимость доставки как ""0"" для любой страны и города
+
+**Steps to reproduce:**
+
+1. Добавить товар в ""**Shopping cart**""
+2. Перейти на страницу ""[Shopping cart](https://demowebshop.tricentis.com/cart)""
+3. Перейти в раздел ""**Estimate shipping**""
+4. В ""**Country**"" выбрать любую страну (Например: Poland)
+5. В ""**Zip / postal code**"" вписать код (Например: 40750)
+
+**Actual Result:**
+
+Стоимость доставки отображается как ""0"" для любой страны и города, также для любого способа доставки.
+
+**Expected Result:**
+
+Стоимость доставки должна быть корректно рассчитана и отображена в соответствии с введенным адресом, страной, городом и условиями доставки, учитывая все возможные тарифы и акции, и способ доставки.","0"
+"G44-98","group4.4","Star","Отсутствие кнопки удаления товара на странице ""Shopping cart""","kartynnikm","14 Apr 2023","14 Apr 2023",,"Minor","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110 MACOS 13","**Description:**
+
+В корзине на [странице](https://demowebshop.tricentis.com/cart) нет прямой опции для удаления товара. Пользователь должен отметить товар и нажать кнопку ""**Update shopping cart**"" для удаления товара, что может быть непонятно и неудобно для пользователей.
+
+**Steps to reproduce:**
+
+1. Добавить товары в ""**Shopping cart**""
+2. Перейти на страницу ""**Shopping cart**""
+3. Просмотреть список товаров в ""**Shopping cart**""
+
+**Actual Result:**
+
+ Кнопка или иконка удаления товара отсутствует на странице корзины. Вместо этого, пользователь должен отметить чекбокс в колонке ""Remove"" рядом с товаром и нажать кнопку ""Update shopping cart"" для удаления товара.
+
+**Expected Result:**
+
+ Для каждого товара в корзине должна быть предусмотрена кнопка или иконка удаления, позволяющая пользователю легко удалить товар из корзины.","0"
+"G44-101","group4.4","Star","Изображение товара в корзине не является ссылкой на страницу товара","kartynnikm","14 Apr 2023","14 Apr 2023",,"Minor","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110 MACOS 13","**Description:**
+
+В корзине на [странице](https://demowebshop.tricentis.com/cart) , изображение товара не является ссылкой, ведущей на страницу товара. Это может привести к неудобству для пользователей, которые хотят получить больше информации о товаре или изменить свой выбор перед оформлением заказа.
+
+**Steps to reproduce:**      
+
+1. Перейти на [страницу](https://demowebshop.tricentis.com/) 
+2. Добавить товар в корзину
+3. Перейти на страницу корзины  
+4. В разделе ""Product(s)"" попытаться кликнуть на изображение товара
+
+**Actual Result:**
+
+Клик по изображению товара не перенаправляет пользователя на страницу товара
+
+**Expected Result:**
+
+Клик по изображению товара должен перенаправлять пользователя на страницу товара","0"
+"G44-93","group4.4","Star","Web App Testing- Maya Kartynnik","kartynnikm","13 Apr 2023","14 Apr 2023",,"Normal","Task","Open","Unassigned","Unscheduled",,,,"No environment",,"0"
+"G44-100","group4.4","Star","Успешная оплата заказа с использованием карты с недостаточным балансом","kartynnikm","14 Apr 2023","14 Apr 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110 MACOS 13","**Description:**
+
+Система некорректно обрабатывает случаи с недостаточным балансом на карте, что может привести к неправильной обработке заказов и проблемам с оплатой. [Тестовые карты](https://docs.assist.ru/pages/viewpage.action?pageId=5767473).
+
+**Steps to reproduce:**
+
+ 1. Пользователь авторизован
+
+    **Email**\:
+
+    [testwebdemo@gmail.com](mailto:testwebdemo@gmail.com)
+
+    **Password**\: 1234Qwer
+
+ 2. Добавить товар в корзину
+
+ 3. Перейти на страницу оформления заказа нажав кнопку ""**Checkout**""
+
+ 4. Данные в разделе ""**Billing address**"" и ""**Shipping address**"" будут заполнены автоматически, при авторизованном пользователе
+
+ 5. Выбрать Shipping Method **""Ground**""
+
+ 6. В поле ""**Payment Method**"" выбрать ""**Credit Card**""
+
+ 7. В разделе ""**Payment Information**"" выбрать тип кредитной карты ""**Visa**""
+
+ 8. Заполнить цифрами поле ""**Cardholder name""** : TEST
+
+ 9. В поле ""**Card number""** ввести номер тестовой карты:
+
+    4024007123874108
+
+10. В поле ""**Expiration date""** ввести срок действия тестовой карты: 01/2023
+
+11. В поле ""**Card code**"" ввести код тестовой карты: 123
+
+12. Нажать кнопку ""**Continue**""
+
+**Actual Result:**
+
+Оплата успешно проходит, если баланс карты недостаточен для оплаты заказа
+
+**Expected Result:**
+
+Отображается сообщение об ошибке, указывающее на недостаточный баланс карты, оплата не проходит","0"
+"G44-95","group4.4","Star","Успешная оплата заказа с использованием просроченной кредитной карты","kartynnikm","14 Apr 2023","14 Apr 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110 MACOS 13","**Description:**
+
+В процессе оформления заказа и оплаты на [сайте](https://demowebshop.tricentis.com/)  обнаружена проблема с проверкой срока действия кредитных карт. Система позволяет провести оплату, даже если срок действия карты истек. Это может привести к возможным проблемам с транзакциями и неправильной обработке оплат. [Тестовые карты](https://docs.assist.ru/pages/viewpage.action?pageId=5767473).
+
+**Steps to reproduce:**
+
+ 1. Пользователь авторизован
+
+    **Email**\:
+
+    [testwebdemo@gmail.com](mailto:testwebdemo@gmail.com)
+
+    **Password**\: 1234Qwer
+
+ 2. Добавить товар в корзину
+
+ 3. Перейти на страницу оформления заказа нажав кнопку ""**Checkout**""
+
+ 4. Данные в разделе ""**Billing address**"" и ""**Shipping address**"" будут заполнены автоматически, при авторизованном пользователе
+
+ 5. Выбрать Shipping Method **""Ground**""
+
+ 6. В поле ""**Payment Method**"" выбрать ""**Credit Card**""
+
+ 7. В разделе ""**Payment Information**"" выбрать тип кредитной карты ""**Visa**""
+
+ 8. Заполнить цифрами поле ""**Cardholder name""** : TEST
+
+ 9. В поле ""**Card number""** ввести номер тестовой карты:	4627100101654724
+
+10. В поле ""**Expiration date""** ввести срок действия тестовой карты: 01/2023
+
+11. В поле ""**Card code**"" ввести код тестовой карты: 123
+
+12. Нажать кнопку ""**Continue**""
+
+    **Actual Result:**
+
+    Оплата успешно проходит, даже если срок действия карты истек.
+    **Expected Result:**
+
+    Отображается сообщение об ошибке, указывающее на истекший срок действия карты,  оплата не проходит.","0"
+"G44-16","group4.4","Star","Testing Documentation-Maya Kartynnik","kartynnikm","31 Mar 2023","14 Apr 2023",,"Normal","Task","Open","Unassigned","Unscheduled",,,,"No environment",,"0"
+"G44-94","group4.4","Star","Оплата проходит при вводе цифр в поле ""Cardholder name"" в разделе ""Payment Information""","kartynnikm","13 Apr 2023","13 Apr 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110 MACOS 13","**Description:**
+
+При оформлении заказа и вводе данных для оплаты, система принимает цифры в поле ""**Cardholder name**"", что не должно быть допустимым, так как имя держателя карты должно состоять из букв. Это может привести к возможным проблемам с оплатой и может вызвать затруднения в идентификации владельца карты. 
+
+**Steps to reproduce:**
+
+ 1. Пользователь авторизован
+
+    **Email**\:
+
+    testwebdemo@gmail.com
+
+    **Password**\: 1234Qwer
+ 2. Добавить товар в корзину  
+ 3. Перейти на страницу оформления заказа нажав кнопку ""**Checkout**"" 
+ 4. Данные в разделе ""**Billing address**"" и ""**Shipping address**"" будут заполнены автоматически, при авторизованном пользователе
+ 5. Выбрать Shipping Method **""Ground**""
+ 6. В поле ""**Payment Method**"" выбрать ""**Credit Card**""
+ 7. В разделе ""**Payment Information**"" выбрать тип кредитной карты ""**Master card**""
+ 8.  Заполнить цифрами поле ""**Cardholder name""** \:123456
+ 9. В поле ""**Card number""** ввести номер тестовой карты: 5467929858074128
+10. В поле ""**Expiration date""** ввести срок действия тестовой карты: 12/2025
+11. В поле ""**Card code**"" ввести код тестовой карты: 123
+12. Нажать кнопку ""**Continue**""
+13. На странице ""**Confirm Order**"" нажать кнопку ""**Confirm**""
+
+**Actual Result:**
+
+Оплата успешно проходит, если в поле ""**Cardholder name**"" введены цифры.
+
+**Expected Result:**
+
+Отображается сообщение об ошибке, указывающее на неверный формат введенного имени владельца карты, оплата не проходит.
+
+
+","0"
+"G44-19","group4.4","Star","Отсутствуют названия полей на странице ""Add Customer"" в разделе""Billing Address""","kartynnikm","31 Mar 2023","31 Mar 2023",,"Normal","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110","**Description:**
+
+1. В разделе ""Billing Address "" на странице [Add Customer](https://demo.guru99.com/telecom/addcustomer.php), необходимо ввести ""First Name"", ""Last Name"", ""Email"", ""Address"" и ""Mobile Number"".
+2. У каждого поля должно быть название, указанное в [требованиях](https://docs.google.com/spreadsheets/d/1VtUxqRyf5JYWQ-yQyT2OPDGZefjaqe1hvT0OfoavK7E/edit#gid=0) ""Страница Add Customer"", пункт (4,5).
+3. Фактически названия полей отсутствуют на странице Billing Address.
+
+**Steps to reproduce:**
+
+1.  Открыть страницу [Add Customer](https://demo.guru99.com/telecom/addcustomer.php).
+2. Обратить внимание на названия полей и placeholder (подсказки) внутри полей для ввода.
+
+**Actual Result:**
+
+Названия полей отсутствуют на странице ""[Add Customer](https://demo.guru99.com/telecom/addcustomer.php)"" в разделе""Billing Address""
+
+**Expected Result:**
+
+Присутствует название каждого поля, указанное в требованиях, а также placeholder (подсказка) внутри поля для ввода, которая повторяет название.
+
+
+","0"
+"G44-20","group4.4","Star","Сообщения об ошибке не сбрасываются после нажатия кнопки ""Reset"" в блоке ""Billing Address"" на странице ""Add Customer""","kartynnikm","31 Mar 2023","31 Mar 2023",,"Normal","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110","**Description:**
+
+1. На странице ""[Add Customer](https://demo.guru99.com/telecom/addcustomer.php)"" в блоке ""Billing Address"" после нажатия кнопки ""Reset"" все заполненные значения и сообщения об ошибке должны обнуляться. см. [требования](https://docs.google.com/spreadsheets/d/1VtUxqRyf5JYWQ-yQyT2OPDGZefjaqe1hvT0OfoavK7E/edit#gid=0) ""Страница Add Customer"" пункт 8.
+2. Фактически после нажатия кнопки Reset все заполненные значения обнуляются, а сообщения об ошибке не обнуляются.
+
+**Steps to reproduce:**
+
+1.  Открыть страницу [Add Customer](https://demo.guru99.com/telecom/addcustomer.php).
+2. Заполнить поля ""Billing Address"" некорректными значениями, чтобы получить сообщение об ошибке.
+3. Нажать кнопку ""Reset"" в блоке ""Billing Address"".
+
+**Actual Result:**
+
+После нажатия кнопки ""Reset"" все заполненные значения обнуляются, а сообщения об ошибке не обнуляются.
+
+**Expected Result:**
+
+После нажатия кнопки ""Reset"" все заполненные значения и сообщения об ошибке на странице [Add Customer](https://demo.guru99.com/telecom/addcustomer.php), в блоке ""Billing Address"" должны обнуляться.","0"
+"G44-21","group4.4","Star","Отсутствуют звездочки ""*"" у обязательных полей в блоке ""Billing Address"" на странице ""Add Customer""","kartynnikm","31 Mar 2023","31 Mar 2023",,"Minor","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110","**Description:**
+
+1. На странице ""[Add Customer](https://demo.guru99.com/telecom/addcustomer.php)"" все поля в блоке ""Billing Address"" обязательные и должны быть отмечены ""**\*""**.см. требования ""Страница Add Customer"" пункт 6.
+2. Фактически все поля в блоке ""Billing Address"" не отмечены \*.
+
+**Steps to reproduce:**
+
+1.  Открыть страницу [Add Customer](https://demo.guru99.com/telecom/addcustomer.php).
+2. Обратить внимание на наличие ""**\***"" в полях в блоке ""Billing Address"".
+
+**Actual Result:**
+
+Поля в блоке ""Billing Address"" не отмечены ""**\***"".
+
+**Expected Result:**
+
+* На странице[ Add Customer](https://demo.guru99.com/telecom/addcustomer.php), все поля в блоке ""Billing Address"" обязательные и должны быть отмечены ""**\***"".","0"
+"G44-26","group4.4","Star","Некорректное отображение сообщения об ошибке при вводе кириллицы в поле 'Address' на странице Add Customer","kartynnikm","31 Mar 2023","31 Mar 2023",,"Major","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110","**Description:**
+
+На странице ""[Add Customer](https://demo.guru99.com/telecom/addcustomer.php)"" при вводе кириллицы в поле ""Address"" должно появляться сообщение ""Cyrillic are not allowed"". см [требования](https://docs.google.com/spreadsheets/d/1VtUxqRyf5JYWQ-yQyT2OPDGZefjaqe1hvT0OfoavK7E/edit#gid=1827757748), валидация, колонка ""кириллица"" для ""Address"".
+
+**Steps to reproduce:**
+
+1. Открыть страницу [Add Customer](https://demo.guru99.com/telecom/addcustomer.php).
+2. В поле ""Address"" ввести кириллицу.
+
+**Actual Result:**
+
+Появляется сообщение ""Address Field must not be blank"".
+
+**Expected Result:**
+
+При вводе кириллицы в поле ""Address"" на странице [Add Customer ](https://demo.guru99.com/telecom/addcustomer.php)должно появляться сообщение ""Cyrillic are not allowed"".","0"
+"G44-25","group4.4","Star","Некорректное отображение сообщения об ошибке при вводе кириллицы в поля ""First Name"" и ""Last Name"" на странице ""Add Customer""","kartynnikm","31 Mar 2023","31 Mar 2023",,"Major","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110","**Description:**
+
+На странице ""[Add Customer](https://demo.guru99.com/telecom/addcustomer.php)"" при вводе кириллицы в поля ""First Name"" и ""Last Name"" должно появляться сообщение ""Cyrillic are not allowed"". см [требования](https://docs.google.com/spreadsheets/d/1VtUxqRyf5JYWQ-yQyT2OPDGZefjaqe1hvT0OfoavK7E/edit#gid=1827757748), валидация, колонка ""кириллица"" для ""First Name"" и ""Last Name"".
+
+**Steps to reproduce:**
+
+1. Открыть страницу [Add Customer](https://demo.guru99.com/telecom/addcustomer.php).
+2. В поле ""First Name"" или ""Last Name"" ввести кириллицу.
+
+**Actual Result:**
+
+Появляется сообщение ""Numbers are not allowed"".
+
+**Expected Result:**
+
+При вводе кириллицы в поля ""First Name"" и ""Last Name"" на странице Add Customer должно появляться сообщение ""Cyrillic are not allowed"".","0"
+"G44-22","group4.4","Star","Сообщение об ошибке при вводе точки или запятой в поле Address на странице Add Customer","kartynnikm","31 Mar 2023","31 Mar 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110","**Description:**
+
+1. На странице ""[Add Customer](https://demo.guru99.com/telecom/addcustomer.php)"" требование к полю ""Address"" - точка и запятая разрешены, другие спецсимволы запрещены. см. [требования](https://docs.google.com/spreadsheets/d/1VtUxqRyf5JYWQ-yQyT2OPDGZefjaqe1hvT0OfoavK7E/edit#gid=1827757748) валидация поля ""Address""
+2. Фактический результат при вводе точки или запятой появляется сообщение ""Special characters are not allowed"".
+
+**Steps to reproduce:**
+
+1. Открыть страницу [Add Customer](https://demo.guru99.com/telecom/addcustomer.php)
+2. Ввести в поле ""Address"" точку или запятую.
+
+**Actual Result:**
+
+Появляется сообщение ""Special characters are not allowed"".
+
+**Expected Result:**
+
+При вводе точки или запятой в поле ""Address"" никаких сообщений об ошибке не должно появляться.","0"
+"G44-24","group4.4","Star","Некорректное отображение сообщения об ошибке при оставлении одного из полей пустым на странице ""Add Custome""r","kartynnikm","31 Mar 2023","31 Mar 2023",,"Major","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110","**Description:**
+
+1. На странице Add Customer сайта  при оставлении одного из полей (First Name, Last Name, Email, Address, Mobile number) пустым и нажатии кнопки ""Submit"" должно появиться соответствующее сообщение об ошибке.см **[требования](https://docs.google.com/spreadsheets/d/1VtUxqRyf5JYWQ-yQyT2OPDGZefjaqe1hvT0OfoavK7E/edit#gid=1827757748)**, валидация, колонка ""**обязательное поле**"".
+2. При оставлении одного из полей пустым и нажатии кнопки ""Submit"" появляется общее сообщение ""please fill all fields"".
+
+**Steps to reproduce:**
+
+1. Открыть страницу [Add Customer](https://demo.guru99.com/telecom/addcustomer.php)
+2. Оставить одно из полей (First Name, Last Name, Email, Address, Mobile number) пустым.
+3. Нажать кнопку ""Submit"".
+
+ **Actual Result:**
+
+Появляется сообщение ""please fill all fields"".
+
+**Expected Result:**
+
+При оставлении одного из полей (First Name, Last Name, Email, Address, Mobile number) пустым и нажатии кнопки ""Submit"" должно появиться соответствующее сообщение об ошибке.
+
+1. Если поле""**First Name**"" оставить пустым и нажать на кнопку Submit, должно появиться сообщение ""**First Name must not be blank**"".
+2. Если поле""**Last name**"" оставить пустым и нажать на кнопку Submit, должно появиться сообщение - ""**Last Name must not be blank**"".
+3. Если поле ""**Email**"" оставить пустым и нажать на кнопку Submit, должно появиться сообщение ""**Email must not be blank**"".
+4. Если поле ""**Address**"" оставить пустым и нажать на кнопку Submit, должно появиться сообщение - ""**Address must not be blank**"".
+5. Если поле ""**Mobile number**"" оставить пустым и нажать на кнопку Submit, должно появиться сообщение - ""**Mobile must not be blank**"".","0"
+"G44-23","group4.4","Star","Ограничение на количество символов в поле ""Mobile number"" на странице ""Add Customer""","kartynnikm","31 Mar 2023","31 Mar 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110","**Description:**
+
+1. На странице[ Add Customer ](https://demo.guru99.com/telecom/addcustomer.php)ограничение на количество символов к полю ""Mobile number"" - 13.см [требования](https://docs.google.com/spreadsheets/d/1VtUxqRyf5JYWQ-yQyT2OPDGZefjaqe1hvT0OfoavK7E/edit#gid=1827757748), валидация,""Mobile number""
+2. Фактически можно ввести максимально 12 цифр, больше не вводится.
+
+**Steps to reproduce:**
+
+1. Открыть страницу [Add Customer](https://demo.guru99.com/telecom/addcustomer.php)
+2. Ввести в поле ""Mobile number"" 13 цифр.
+
+
+**Actual Result:**
+
+Максимальное количество цифр, которое можно ввести в поле ""Mobile number"" - 12.
+
+**Expected Result:**
+
+На странице[ Add Customer](https://demo.guru99.com/telecom/addcustomer.php) ограничение на количество символов к полю ""Mobile number"" - 13.","0"
+"G44-17","group4.4","Star","Неверная переадресация при нажатии на логотип ""Guru99"" на главной странице","kartynnikm","31 Mar 2023","31 Mar 2023",,"Minor","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110","**Description:**
+
+1. На сайте <https://demo.guru99.com/telecom/index.html> в шапке размещен логотип сервиса ""Guru99"".
+2. Согласно [требованию](https://docs.google.com/spreadsheets/d/1VtUxqRyf5JYWQ-yQyT2OPDGZefjaqe1hvT0OfoavK7E/edit#gid=0) ""Главная страница"",пункт (1,2), при нажатии на логотип должна происходить переадресация на главную страницу сайта.
+3. Фактически при нажатии на логотип происходит перенаправление на страницу ""Tutorials Library"", которая не соответствует требованию.
+
+**Steps to reproduce:**
+
+1. Открыть сайт <https://demo.guru99.com/telecom/index.html>.
+2. Нажать на логотип ""Guru99"".
+3. Обратить внимание на адрес страницы и содержимое страницы.
+
+**Actual Result:**
+
+При нажатии на логотип ""Guru99"" происходит перенаправление на страницу ""Tutorials Library"".
+
+**Expected Result:**
+
+При нажатии на логотип ""Guru99"" происходит переадресация на главную страницу сайта <https://demo.guru99.com/telecom/index.html>.
+
+**Предложение по устранению проблемы:**
+
+Исправить код сайта, чтобы при нажатии на логотип ""Guru99"" происходила переадресация на главную страницу сайта <https://demo.guru99.com/telecom/index.html>.","0"
+"G44-18","group4.4","Star","Отсутствует кнопка ""Delete Customer"" на главной странице и в боковом гамбургер-меню","kartynnikm","31 Mar 2023","31 Mar 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Google Chrome version 111.0.5563.110","**Description:**
+
+1\.На главной странице сайта <https://demo.guru99.com/telecom/index.html> должна присутствовать картинка с телефоном и 5 активных кнопок: Add Customer, Add Tariff Plan, Add Tariff Plan to Customer, Pay Billing, Delete Customer. См. [требования](https://docs.google.com/spreadsheets/d/1VtUxqRyf5JYWQ-yQyT2OPDGZefjaqe1hvT0OfoavK7E/edit#gid=0) ""Главная страница"" пункт 3,5.
+
+2\.Пользователь может вызвать эти кнопки, используя боковое гамбургер-меню.
+
+3\.Фактически кнопка Delete Customer отсутствует как на главной странице сайта, так и в боковом гамбургер-меню.
+
+**Steps to reproduce:**
+
+1\.Открыть сайт <https://demo.guru99.com/telecom/index.html>.
+
+2\.Обратить внимание на наличие 5 активных кнопок: Add Customer, Add Tariff Plan, Add Tariff Plan to Customer, Pay Billing, Delete Customer на главной странице сайта.
+
+3\.Нажать на боковое гамбургер-меню.
+
+4\.Обратить внимание на наличие кнопки Delete Customer в меню.
+
+**Actual Result:**
+
+Кнопка Delete Customer отсутствует как на главной странице сайта, так и в боковом гамбургер-меню.
+
+**Expected Result:**
+
+На главной странице сайта и в боковом гамбургер-меню присутствует кнопка Delete Customer.
+
+
+","0"
